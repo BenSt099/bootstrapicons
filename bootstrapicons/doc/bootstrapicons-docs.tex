@@ -1,0 +1,268 @@
+\documentclass{article}
+
+\usepackage{xcolor}
+\definecolor{Caution}{HTML}{F9A800}
+\definecolor{Warning}{HTML}{D05D29} 
+\definecolor{Prohibition}{HTML}{9B2423}  
+\definecolor{Mandatory}{HTML}{005387}  
+\definecolor{Rescue}{HTML}{237F52}  
+\definecolor{Backgrounds}{HTML}{ECECE7}  
+\definecolor{Symbol}{HTML}{2B2B2C} 
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=black,
+    citecolor=black
+}
+\urlstyle{same}
+
+\usepackage{verbatim}
+\makeatletter
+\newcommand{\verbatimfontfamily}[1]{\def\verbatim@font{#1}}%
+\makeatother
+\usepackage{colortbl}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{
+    left=2cm,
+    right=2cm,
+    top=3cm,
+    bottom=3cm
+}
+\usepackage{tcolorbox}
+
+\definecolor{logocolor}{HTML}{6610f2}
+\definecolor{logocolordark}{HTML}{1f0647}
+
+\usepackage{lcep}
+
+\begin{document}
+\thispagestyle{empty}
+
+\tcbset{colback=logocolor,colframe=logocolordark}
+
+\begin{flushright}
+\begin{tcolorbox}[leftrule=3mm,arc=0mm,width=4.5cm]
+\begin{center}
+{\Large\textcolor{white}{\it\bf VERSION 1}}
+\end{center}
+\end{tcolorbox}
+\end{flushright}
+
+\begin{flushright}
+\begin{tcolorbox}[leftrule=3mm,arc=0mm,width=6.5cm]
+\begin{center}
+{\Large\textcolor{white}{\it\bf AUGUST 23, 2025}}
+\end{center}
+\end{tcolorbox}
+\end{flushright}
+
+\hspace{0pt}
+\vfill
+\begin{center}
+\includegraphics[scale=1.0]{bootstrapicons_logo.pdf}
+\end{center}\vspace{2mm}
+\begin{center}
+    \href{https://github.com/BenSt099/bootstrapicons}{\textcolor{black}{Link $\looparrowright$}}
+\end{center}
+\vfill
+\hspace{0pt}
+\newpage
+
+\thispagestyle{empty}
+
+\doublespacing
+\tableofcontents
+\singlespacing
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    \begin{tcolorbox}[colback=white,colframe=gray-700, width=7cm,halign=center,boxrule=0.2mm]
+        {\Large The {\sffamily bootstrapicons} package}
+
+        Manual for version 1
+    \end{tcolorbox}\vspace{15mm}
+
+    \href{https://www.ctan.org/pkg/bootstrapicons}{\textcolor{blue-700}{https://www.ctan.org/pkg/bootstrapicons}}\vspace{6mm}
+
+    \href{https://github.com/BenSt099/bootstrapicons}{\textcolor{blue-700}{https://github.com/BenSt099/bootstrapicons}}
+\end{center}\vspace{7mm}
+
+\begin{abstract}
+\noindent This is the official documentation of the package \textbf{bootstrapicons}. It provides ISO colors and signs according to the ISO standards
+3864, 7001 and 7010. These standards can be used to create instructions for chemical or physical experiments.
+\end{abstract}\vspace{10mm}
+
+\begin{tcolorbox}[leftrule=3mm,colback=red-200,colframe=red-800,lower separated=false,sidebyside,lefthand width=1.5cm]
+    \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} This is NOT an official package from the ISO (International Organization for Standardization). All signs are taken from Wikipedia.
+\end{tcolorbox}
+
+\begin{tcolorbox}[leftrule=3mm,colback=red-200,colframe=red-800,lower separated=false,sidebyside,lefthand width=1.5cm]
+    \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} If you experience problems (e.g. on Windows) with this package, it may be due to \textit{bootstrapicons} not finding the pdfs properly. Please use the workaround in section~\ref{sec:issue}.
+\end{tcolorbox}\vspace{10mm}
+
+\newpage
+
+\section{Installation}
+
+The package is included in \TeX Live and Mik\TeX. If you would like to install it manually, please download the package from GitHub (\href{https://github.com/BenSt099/bootstrapicons/releases}{\textcolor{blue-700}{https://github.com/BenSt099/bootstrapicons/releases}}).
+After that, please unzip the package and put it into the directory, where your distribution puts its packages, e.g. for \TeX Live 2024 (Windows) you would put the package into this folder:
+
+\begin{verbatim}
+    C:\texlive\2024\texmf-dist\tex\latex\
+\end{verbatim}
+
+\noindent After this step, there should be a folder with path: 
+
+\begin{verbatim}
+    C:\texlive\2023\texmf-dist\tex\latex\bootstrapicons\
+\end{verbatim}
+in which a file 
+
+\begin{verbatim}
+    bootstrapicons.sty
+\end{verbatim} 
+and several folders should reside. You can verify your installation by trying it out.
+
+\section{Loading the package \& Dependencies}
+
+You can load the package with the following command in the preamble:
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray-200]
+    \vspace{3mm}
+    \begin{verbatim}
+    \usepackage{bootstrapicons}
+    \end{verbatim}    
+\end{tcolorbox}\vspace{5mm}
+
+\noindent This package has the following dependencies: \texttt{graphicx}, \texttt{ifthen}, \texttt{xkeyval}
+
+\section{ISO Colors (standard 3864)}
+
+Seven colors are defined which are also used to create the signs: \vspace{5mm}
+
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Name} & \textbf{Colors} & \textbf{Hex} \\ 
+        \hline
+        Caution & \cellcolor{Caution} & \texttt{\#F9A800} \\
+        Warning & \cellcolor{Warning} & \texttt{\#D05D29} \\
+        Prohibition & \cellcolor{Prohibition} & \texttt{\#9B2423} \\
+        Mandatory & \cellcolor{Mandatory} & \texttt{\#005387} \\
+        Rescue & \cellcolor{Rescue} & \texttt{\#237F52} \\
+        Backgrounds & \cellcolor{Backgrounds} & \texttt{\#ECECE7} \\
+        Smybol & \cellcolor{Symbol} & \texttt{\#2B2B2C} \\
+        \hline
+\end{tabular}\vspace{5mm}
+
+\noindent How to use: \vspace{3mm}
+
+\verbatimfontfamily{\ttfamily}
+
+\begin{verbatim}
+{\color{Mandatory} \textbf{Text with Mandatory color.}}
+\end{verbatim}\vspace{2mm}
+
+\noindent{\color{Mandatory} \textbf{Text with Mandatory color.}}
+
+\newpage
+
+\section{ISO Signs (standard 7010)}
+
+\noindent This section deals with the construction of signs. To begin with, each sign is placed in a category, has a letter and a number: \vspace{5mm}
+
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{lll}
+        \hline
+        Category & Letter(s) & Numbers \\ 
+        \hline
+        Safe condition &  E & (001 - 004, 007 - 070) \\
+        Crescent variant & CV & (003, 004, 009, 010, 011, 012, 013, 027, 028, 029, 064, 067) \\
+        Fire Protection &  F & (001 - 019) \\
+        Mandatory &  M & (001 - 060) \\
+        Prohibition &  P & (001 - 074) \\
+        Warning & W & (001 - 080) \\
+        \hline
+\end{tabular}\vspace{5mm}
+
+\noindent The command to access a sign is: 
+
+\begin{tcolorbox}[colback=gray-200]
+    \vspace{3mm}
+    \begin{verbatim}
+    \Isosign{<Letter><Number>}
+    \end{verbatim}    
+\end{tcolorbox}
+\vspace{5mm}
+
+\noindent This command constructs a path to a sign in your \TeX Live / Mik\TeX / \ldots $\;$ installation. 
+To display a sign, use the following code:
+
+\begin{tcolorbox}[colback=gray-200]
+    \vspace{3mm}
+    \begin{verbatim}
+    %%% Example file   
+    \documentclass{article}
+    
+        \usepackage{bootstrapicons}
+
+    \begin{document}
+
+            \includegraphics{\Isosign{F001}}
+
+            \includegraphics[scale=2]{\Isosign{P074}}
+
+    \end{document}
+    \end{verbatim}    
+\end{tcolorbox}
+
+\noindent\textbf{NOTE}: For more information about the signs and standards, take a look at \href{https://en.wikipedia.org/wiki/ISO_7010}{\textcolor{blue-700}{https://en.wikipedia.org/wiki/ISO\_7010}}.
+
+\newpage
+
+\section{Known Issue}\label{sec:issue}
+
+\noindent On some systems (mostly Windows), \TeX \hspace{1mm} is not able to find the pdfs properly. Since this is an issue that seems to exist only on certain systems and not all, please use the following
+workaround by providing the fullpath that leads to the installation directory 
+of bootstrapicons. This can be done by supplying it through the \textbf{fullpath}-option:
+
+\begin{tcolorbox}[colback=gray-200]
+    \vspace{3mm}
+    \begin{verbatim}
+    %%% Example file   
+    \documentclass{article}
+    
+                                % example path
+        \usepackage[ fullpath = /texlive/2024/texmf-dist/tex/latex/bootstrapicons ]{bootstrapicons}
+
+    \begin{document}
+
+            \includegraphics{\Isosign{F001}}
+
+            \includegraphics[scale=2]{\Isosign{P074}}
+
+    \end{document}
+    \end{verbatim}    
+\end{tcolorbox}
+\vspace{5mm}
+
+\noindent If you are unsure about the path, simply execute 
+\begin{verbatim}
+    kpsewhich bootstrapicons.sty
+\end{verbatim}\vspace{3mm} 
+
+\noindent in a terminal and a path will be returned. The path that is given in the example is the typical path on most systems. 
+\vspace{5mm}
+
+\noindent\textbf{NOTE}: On Windows, the path should also be given with foreslashes (just like in the example). \\
+
+\noindent\textbf{NOTE}: The last directory in the path \textit{does not} end with a foreslash (just like in the example). \\
+
+\end{document}
