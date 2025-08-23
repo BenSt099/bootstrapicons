@@ -26,6 +26,7 @@
 \makeatother
 \usepackage{colortbl}
 \usepackage{amssymb}
+\usepackage{pdflscape}
 \usepackage{geometry}
 \geometry{
     left=2cm,
@@ -94,12 +95,11 @@
 \end{center}\vspace{7mm}
 
 \begin{abstract}
-\noindent This is the official documentation of the package \textbf{bootstrapicons}. It provides ISO colors and signs according to the ISO standards
-3864, 7001 and 7010. These standards can be used to create instructions for chemical or physical experiments.
+\noindent This is the official documentation of the package \textbf{bootstrapicons}. It contains over 2,000 icons from Bootstrap. 
 \end{abstract}\vspace{10mm}
 
 \begin{tcolorbox}[leftrule=3mm,colback=red-200,colframe=red-800,lower separated=false,sidebyside,lefthand width=1.5cm]
-    \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} This is NOT an official package from the ISO (International Organization for Standardization). All signs are taken from Wikipedia.
+    \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} This is NOT an official package from \textbf{Bootstrap} (\href{https://getbootstrap.com/}{\textcolor{blue-700}{https://getbootstrap.com/}}).
 \end{tcolorbox}
 
 \begin{tcolorbox}[leftrule=3mm,colback=red-200,colframe=red-800,lower separated=false,sidebyside,lefthand width=1.5cm]
@@ -143,61 +143,16 @@ You can load the package with the following command in the preamble:
 
 \noindent This package has the following dependencies: \texttt{graphicx}, \texttt{ifthen}, \texttt{xkeyval}
 
-\section{ISO Colors (standard 3864)}
-
-Seven colors are defined which are also used to create the signs: \vspace{5mm}
-
-\renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{|l|l|l|}
-        \hline
-        \textbf{Name} & \textbf{Colors} & \textbf{Hex} \\ 
-        \hline
-        Caution & \cellcolor{Caution} & \texttt{\#F9A800} \\
-        Warning & \cellcolor{Warning} & \texttt{\#D05D29} \\
-        Prohibition & \cellcolor{Prohibition} & \texttt{\#9B2423} \\
-        Mandatory & \cellcolor{Mandatory} & \texttt{\#005387} \\
-        Rescue & \cellcolor{Rescue} & \texttt{\#237F52} \\
-        Backgrounds & \cellcolor{Backgrounds} & \texttt{\#ECECE7} \\
-        Smybol & \cellcolor{Symbol} & \texttt{\#2B2B2C} \\
-        \hline
-\end{tabular}\vspace{5mm}
-
-\noindent How to use: \vspace{3mm}
-
-\verbatimfontfamily{\ttfamily}
-
-\begin{verbatim}
-{\color{Mandatory} \textbf{Text with Mandatory color.}}
-\end{verbatim}\vspace{2mm}
-
-\noindent{\color{Mandatory} \textbf{Text with Mandatory color.}}
-
 \newpage
 
-\section{ISO Signs (standard 7010)}
+\section{How to Use}
 
-\noindent This section deals with the construction of signs. To begin with, each sign is placed in a category, has a letter and a number: \vspace{5mm}
-
-\renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{lll}
-        \hline
-        Category & Letter(s) & Numbers \\ 
-        \hline
-        Safe condition &  E & (001 - 004, 007 - 070) \\
-        Crescent variant & CV & (003, 004, 009, 010, 011, 012, 013, 027, 028, 029, 064, 067) \\
-        Fire Protection &  F & (001 - 019) \\
-        Mandatory &  M & (001 - 060) \\
-        Prohibition &  P & (001 - 074) \\
-        Warning & W & (001 - 080) \\
-        \hline
-\end{tabular}\vspace{5mm}
-
-\noindent The command to access a sign is: 
+\noindent Each icon has a name. All names and icons are listed in section~\ref{sec:icons}. The command to access an icon is:  \vspace{5mm}
 
 \begin{tcolorbox}[colback=gray-200]
     \vspace{3mm}
     \begin{verbatim}
-    \Isosign{<Letter><Number>}
+    \bicon{<name>}
     \end{verbatim}    
 \end{tcolorbox}
 \vspace{5mm}
@@ -215,15 +170,15 @@ To display a sign, use the following code:
 
     \begin{document}
 
-            \includegraphics{\Isosign{F001}}
+            \includegraphics{\bicon{0-circle}}
 
-            \includegraphics[scale=2]{\Isosign{P074}}
+            \includegraphics[scale=2]{\bicon{beaker-fill}}
 
     \end{document}
     \end{verbatim}    
 \end{tcolorbox}
 
-\noindent\textbf{NOTE}: For more information about the signs and standards, take a look at \href{https://en.wikipedia.org/wiki/ISO_7010}{\textcolor{blue-700}{https://en.wikipedia.org/wiki/ISO\_7010}}.
+\noindent\textbf{NOTE}: For more information about the icons, take a look at \href{https://icons.getbootstrap.com/}{\textcolor{blue-700}{https://icons.getbootstrap.com/}}.
 
 \newpage
 
@@ -244,9 +199,9 @@ of bootstrapicons. This can be done by supplying it through the \textbf{fullpath
 
     \begin{document}
 
-            \includegraphics{\Isosign{F001}}
+            \includegraphics{\bicon{0-circle}}
 
-            \includegraphics[scale=2]{\Isosign{P074}}
+            \includegraphics[scale=2]{\bicon{beaker-fill}}
 
     \end{document}
     \end{verbatim}    
@@ -265,4 +220,848 @@ of bootstrapicons. This can be done by supplying it through the \textbf{fullpath
 
 \noindent\textbf{NOTE}: The last directory in the path \textit{does not} end with a foreslash (just like in the example). \\
 
+\newpage
+\newgeometry{left=0.1cm,
+    right=0cm,
+    top=0.5cm,
+    bottom=0.5cm
+}
+\begin{landscape} 
+
+\section{All Icons}\label{sec:icons}
+
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/0-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/0-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/0-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/0-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/1-circle-fill.pdf} \\
+        \texttt{0-circle-fill} & \texttt{0-circle} & \texttt{0-square-fill} & \texttt{0-square} & \texttt{1-circle-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/1-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/1-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/1-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/123.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/2-circle-fill.pdf} \\
+        \texttt{1-circle} & \texttt{1-square-fill} & \texttt{1-square} & \texttt{123} & \texttt{2-circle-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/2-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/2-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/2-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/3-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/3-circle.pdf} \\
+        \texttt{2-circle} & \texttt{2-square-fill} & \texttt{2-square} & \texttt{3-circle-fill} & \texttt{3-circle} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/3-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/3-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/4-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/4-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/4-square-fill.pdf} \\
+        \texttt{3-square-fill} & \texttt{3-square} & \texttt{4-circle-fill} & \texttt{4-circle} & \texttt{4-square-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/4-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/5-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/5-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/5-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/5-square.pdf} \\
+        \texttt{4-square} & \texttt{5-circle-fill} & \texttt{5-circle} & \texttt{5-square-fill} & \texttt{5-square} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/6-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/6-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/6-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/6-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/7-circle-fill.pdf} \\
+        \texttt{6-circle-fill} & \texttt{6-circle} & \texttt{6-square-fill} & \texttt{6-square} & \texttt{7-circle-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/7-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/7-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/7-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/8-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/8-circle.pdf} \\
+        \texttt{7-circle} & \texttt{7-square-fill} & \texttt{7-square} & \texttt{8-circle-fill} & \texttt{8-circle} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/8-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/8-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/9-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/9-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/9-square-fill.pdf} \\
+        \texttt{8-square-fill} & \texttt{8-square} & \texttt{9-circle-fill} & \texttt{9-circle} & \texttt{9-square-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/9-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/activity.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/airplane-engines-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/airplane-engines.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/airplane-fill.pdf} \\
+        \texttt{9-square} & \texttt{activity} & \texttt{airplane-engines-fill} & \texttt{airplane-engines} & \texttt{airplane-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/airplane.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/alarm-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/alarm.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/alexa.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/align-bottom.pdf} \\
+        \texttt{airplane} & \texttt{alarm-fill} & \texttt{alarm} & \texttt{alexa} & \texttt{align-bottom} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/align-center.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/align-end.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/align-middle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/align-start.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/align-top.pdf} \\
+        \texttt{align-center} & \texttt{align-end} & \texttt{align-middle} & \texttt{align-start} & \texttt{align-top} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/alipay.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/alphabet-uppercase.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/alphabet.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/alt.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/amazon.pdf} \\
+        \texttt{alipay} & \texttt{alphabet-uppercase} & \texttt{alphabet} & \texttt{alt} & \texttt{amazon} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/amd.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/android.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/android2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/anthropic.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/app-indicator.pdf} \\
+        \texttt{amd} & \texttt{android} & \texttt{android2} & \texttt{anthropic} & \texttt{app-indicator} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/app.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/apple-music.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/apple.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/archive-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/archive.pdf} \\
+        \texttt{app} & \texttt{apple-music} & \texttt{apple} & \texttt{archive-fill} & \texttt{archive} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-90deg-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-90deg-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-90deg-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-90deg-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-bar-down.pdf} \\
+        \texttt{arrow-90deg-down} & \texttt{arrow-90deg-left} & \texttt{arrow-90deg-right} & \texttt{arrow-90deg-up} & \texttt{arrow-bar-down} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-bar-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-bar-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-bar-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-clockwise.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-counterclockwise.pdf} \\
+        \texttt{arrow-bar-left} & \texttt{arrow-bar-right} & \texttt{arrow-bar-up} & \texttt{arrow-clockwise} & \texttt{arrow-counterclockwise} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-left-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-left-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-left-square-fill.pdf} \\
+        \texttt{arrow-down-circle-fill} & \texttt{arrow-down-circle} & \texttt{arrow-down-left-circle-fill} & \texttt{arrow-down-left-circle} & \texttt{arrow-down-left-square-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-left-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-right-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-right-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-right-square-fill.pdf} \\
+        \texttt{arrow-down-left-square} & \texttt{arrow-down-left} & \texttt{arrow-down-right-circle-fill} & \texttt{arrow-down-right-circle} & \texttt{arrow-down-right-square-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-right-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-short.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-square.pdf} \\
+        \texttt{arrow-down-right-square} & \texttt{arrow-down-right} & \texttt{arrow-down-short} & \texttt{arrow-down-square-fill} & \texttt{arrow-down-square} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-left-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-left-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-left-right.pdf} \\
+        \texttt{arrow-down-up} & \texttt{arrow-down} & \texttt{arrow-left-circle-fill} & \texttt{arrow-left-circle} & \texttt{arrow-left-right} \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-left-short.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-left-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-left-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-repeat.pdf} \\
+        \texttt{arrow-left-short} & \texttt{arrow-left-square-fill} & \texttt{arrow-left-square} & \texttt{arrow-left} & \texttt{arrow-repeat} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-return-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-return-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-right-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-right-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-right-short.pdf} \\
+        \texttt{arrow-return-left} & \texttt{arrow-return-right} & \texttt{arrow-right-circle-fill} & \texttt{arrow-right-circle} & \texttt{arrow-right-short} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-right-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-right-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-through-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-through-heart.pdf} \\
+        \texttt{arrow-right-square-fill} & \texttt{arrow-right-square} & \texttt{arrow-right} & \texttt{arrow-through-heart-fill} & \texttt{arrow-through-heart} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-left-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-left-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-left-square-fill.pdf} \\
+        \texttt{arrow-up-circle-fill} & \texttt{arrow-up-circle} & \texttt{arrow-up-left-circle-fill} & \texttt{arrow-up-left-circle} & \texttt{arrow-up-left-square-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-left-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-right-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-right-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-right-square-fill.pdf} \\
+        \texttt{arrow-up-left-square} & \texttt{arrow-up-left} & \texttt{arrow-up-right-circle-fill} & \texttt{arrow-up-right-circle} & \texttt{arrow-up-right-square-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-right-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-short.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up-square.pdf} \\
+        \texttt{arrow-up-right-square} & \texttt{arrow-up-right} & \texttt{arrow-up-short} & \texttt{arrow-up-square-fill} & \texttt{arrow-up-square} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrow-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-angle-contract.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-angle-expand.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-collapse-vertical.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-collapse.pdf} \\
+        \texttt{arrow-up} & \texttt{arrows-angle-contract} & \texttt{arrows-angle-expand} & \texttt{arrows-collapse-vertical} & \texttt{arrows-collapse} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-expand-vertical.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-expand.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-fullscreen.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-move.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows-vertical.pdf} \\
+        \texttt{arrows-expand-vertical} & \texttt{arrows-expand} & \texttt{arrows-fullscreen} & \texttt{arrows-move} & \texttt{arrows-vertical} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/arrows.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/aspect-ratio-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/aspect-ratio.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/asterisk.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/at.pdf} \\
+        \texttt{arrows} & \texttt{aspect-ratio-fill} & \texttt{aspect-ratio} & \texttt{asterisk} & \texttt{at} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/award-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/award.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/back.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack.pdf} \\
+        \texttt{award-fill} & \texttt{award} & \texttt{back} & \texttt{backpack-fill} & \texttt{backpack} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack3-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack3.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack4-fill.pdf} \\
+        \texttt{backpack2-fill} & \texttt{backpack2} & \texttt{backpack3-fill} & \texttt{backpack3} & \texttt{backpack4-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backpack4.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backspace-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backspace-reverse-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backspace-reverse.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/backspace.pdf} \\
+        \texttt{backpack4} & \texttt{backspace-fill} & \texttt{backspace-reverse-fill} & \texttt{backspace-reverse} & \texttt{backspace} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-3d-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-3d.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-4k-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-4k.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-8k-fill.pdf} \\
+        \texttt{badge-3d-fill} & \texttt{badge-3d} & \texttt{badge-4k-fill} & \texttt{badge-4k} & \texttt{badge-8k-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-8k.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-ad-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-ad.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-ar-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-ar.pdf} \\
+        \texttt{badge-8k} & \texttt{badge-ad-fill} & \texttt{badge-ad} & \texttt{badge-ar-fill} & \texttt{badge-ar} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-cc-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-cc.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-hd-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-hd.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-sd-fill.pdf} \\
+        \texttt{badge-cc-fill} & \texttt{badge-cc} & \texttt{badge-hd-fill} & \texttt{badge-hd} & \texttt{badge-sd-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-sd.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-tm-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-tm.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-vo-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-vo.pdf} \\
+        \texttt{badge-sd} & \texttt{badge-tm-fill} & \texttt{badge-tm} & \texttt{badge-vo-fill} & \texttt{badge-vo} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-vr-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-vr.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-wc-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/badge-wc.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-check-fill.pdf} \\
+        \texttt{badge-vr-fill} & \texttt{badge-vr} & \texttt{badge-wc-fill} & \texttt{badge-wc} & \texttt{bag-check-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-dash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-heart-fill.pdf} \\
+        \texttt{bag-check} & \texttt{bag-dash-fill} & \texttt{bag-dash} & \texttt{bag-fill} & \texttt{bag-heart-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-x-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag-x.pdf} \\
+        \texttt{bag-heart} & \texttt{bag-plus-fill} & \texttt{bag-plus} & \texttt{bag-x-fill} & \texttt{bag-x} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bag.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/balloon-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/balloon-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/balloon-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/balloon.pdf} \\
+        \texttt{bag} & \texttt{balloon-fill} & \texttt{balloon-heart-fill} & \texttt{balloon-heart} & \texttt{balloon} \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ban-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ban.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bandaid-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bandaid.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bank.pdf} \\
+        \texttt{ban-fill} & \texttt{ban} & \texttt{bandaid-fill} & \texttt{bandaid} & \texttt{bank} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bank2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bar-chart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bar-chart-line-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bar-chart-line.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bar-chart-steps.pdf} \\
+        \texttt{bank2} & \texttt{bar-chart-fill} & \texttt{bar-chart-line-fill} & \texttt{bar-chart-line} & \texttt{bar-chart-steps} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bar-chart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/basket-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/basket.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/basket2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/basket2.pdf} \\
+        \texttt{bar-chart} & \texttt{basket-fill} & \texttt{basket} & \texttt{basket2-fill} & \texttt{basket2} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/basket3-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/basket3.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/battery-charging.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/battery-full.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/battery-half.pdf} \\
+        \texttt{basket3-fill} & \texttt{basket3} & \texttt{battery-charging} & \texttt{battery-full} & \texttt{battery-half} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/battery-low.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/battery.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/beaker-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/beaker.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/behance.pdf} \\
+        \texttt{battery-low} & \texttt{battery} & \texttt{beaker-fill} & \texttt{beaker} & \texttt{behance} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bell-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bell-slash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bell-slash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bell.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bezier.pdf} \\
+        \texttt{bell-fill} & \texttt{bell-slash-fill} & \texttt{bell-slash} & \texttt{bell} & \texttt{bezier} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bezier2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bicycle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bing.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/binoculars-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/binoculars.pdf} \\
+        \texttt{bezier2} & \texttt{bicycle} & \texttt{bing} & \texttt{binoculars-fill} & \texttt{binoculars} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/blockquote-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/blockquote-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bluesky.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bluetooth.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/body-text.pdf} \\
+        \texttt{blockquote-left} & \texttt{blockquote-right} & \texttt{bluesky} & \texttt{bluetooth} & \texttt{body-text} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/book-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/book-half.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/book.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-check.pdf} \\
+        \texttt{book-fill} & \texttt{book-half} & \texttt{book} & \texttt{bookmark-check-fill} & \texttt{bookmark-check} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-dash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-heart.pdf} \\
+        \texttt{bookmark-dash-fill} & \texttt{bookmark-dash} & \texttt{bookmark-fill} & \texttt{bookmark-heart-fill} & \texttt{bookmark-heart} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-star-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-star.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-x-fill.pdf} \\
+        \texttt{bookmark-plus-fill} & \texttt{bookmark-plus} & \texttt{bookmark-star-fill} & \texttt{bookmark-star} & \texttt{bookmark-x-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmark.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmarks-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookmarks.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bookshelf.pdf} \\
+        \texttt{bookmark-x} & \texttt{bookmark} & \texttt{bookmarks-fill} & \texttt{bookmarks} & \texttt{bookshelf} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/boombox-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/boombox.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bootstrap-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bootstrap-reboot.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bootstrap.pdf} \\
+        \texttt{boombox-fill} & \texttt{boombox} & \texttt{bootstrap-fill} & \texttt{bootstrap-reboot} & \texttt{bootstrap} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-all.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-bottom.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-center.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-inner.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-left.pdf} \\
+        \texttt{border-all} & \texttt{border-bottom} & \texttt{border-center} & \texttt{border-inner} & \texttt{border-left} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-middle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-outer.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-style.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-top.pdf} \\
+        \texttt{border-middle} & \texttt{border-outer} & \texttt{border-right} & \texttt{border-style} & \texttt{border-top} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border-width.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/border.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bounding-box-circles.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bounding-box.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-down-left.pdf} \\
+        \texttt{border-width} & \texttt{border} & \texttt{bounding-box-circles} & \texttt{bounding-box} & \texttt{box-arrow-down-left} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-down-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-down-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-down-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-down.pdf} \\
+        \texttt{box-arrow-down-right} & \texttt{box-arrow-down} & \texttt{box-arrow-in-down-left} & \texttt{box-arrow-in-down-right} & \texttt{box-arrow-in-down} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-up-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-up-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-in-up.pdf} \\
+        \texttt{box-arrow-in-left} & \texttt{box-arrow-in-right} & \texttt{box-arrow-in-up-left} & \texttt{box-arrow-in-up-right} & \texttt{box-arrow-in-up} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-up-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-up-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-arrow-up.pdf} \\
+        \texttt{box-arrow-left} & \texttt{box-arrow-right} & \texttt{box-arrow-up-left} & \texttt{box-arrow-up-right} & \texttt{box-arrow-up} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-seam-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box-seam.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box.pdf} & \\
+        \texttt{box-fill} & \texttt{box-seam-fill} & \texttt{box-seam} & \texttt{box} & \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box2-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box2-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/box2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/boxes.pdf} \\
+        \texttt{box2-fill} & \texttt{box2-heart-fill} & \texttt{box2-heart} & \texttt{box2} & \texttt{boxes} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/braces-asterisk.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/braces.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bricks.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/briefcase-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/briefcase.pdf} \\
+        \texttt{braces-asterisk} & \texttt{braces} & \texttt{bricks} & \texttt{briefcase-fill} & \texttt{briefcase} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-alt-high-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-alt-high.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-alt-low-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-alt-low.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-high-fill.pdf} \\
+        \texttt{brightness-alt-high-fill} & \texttt{brightness-alt-high} & \texttt{brightness-alt-low-fill} & \texttt{brightness-alt-low} & \texttt{brightness-high-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-high.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-low-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brightness-low.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brilliance.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/broadcast-pin.pdf} \\
+        \texttt{brightness-high} & \texttt{brightness-low-fill} & \texttt{brightness-low} & \texttt{brilliance} & \texttt{broadcast-pin} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/broadcast.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/browser-chrome.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/browser-edge.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/browser-firefox.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/browser-safari.pdf} \\
+        \texttt{broadcast} & \texttt{browser-chrome} & \texttt{browser-edge} & \texttt{browser-firefox} & \texttt{browser-safari} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brush-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/brush.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bucket-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bucket.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bug-fill.pdf} \\
+        \texttt{brush-fill} & \texttt{brush} & \texttt{bucket-fill} & \texttt{bucket} & \texttt{bug-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bug.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-add.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-down.pdf} \\
+        \texttt{bug} & \texttt{building-add} & \texttt{building-check} & \texttt{building-dash} & \texttt{building-down} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-exclamation.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-add.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-down.pdf} \\
+        \texttt{building-exclamation} & \texttt{building-fill-add} & \texttt{building-fill-check} & \texttt{building-fill-dash} & \texttt{building-fill-down} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-exclamation.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-gear.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-lock.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-slash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-up.pdf} \\
+        \texttt{building-fill-exclamation} & \texttt{building-fill-gear} & \texttt{building-fill-lock} & \texttt{building-fill-slash} & \texttt{building-fill-up} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-gear.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-lock.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-slash.pdf} \\
+        \texttt{building-fill-x} & \texttt{building-fill} & \texttt{building-gear} & \texttt{building-lock} & \texttt{building-slash} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/building.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/buildings-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/buildings.pdf} \\
+        \texttt{building-up} & \texttt{building-x} & \texttt{building} & \texttt{buildings-fill} & \texttt{buildings} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bullseye.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bus-front-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/bus-front.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/c-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/c-circle.pdf} \\
+        \texttt{bullseye} & \texttt{bus-front-fill} & \texttt{bus-front} & \texttt{c-circle-fill} & \texttt{c-circle} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/c-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/c-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cake-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cake.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cake2-fill.pdf} \\
+        \texttt{c-square-fill} & \texttt{c-square} & \texttt{cake-fill} & \texttt{cake} & \texttt{cake2-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cake2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calculator-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calculator.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-check.pdf} \\
+        \texttt{cake2} & \texttt{calculator-fill} & \texttt{calculator} & \texttt{calendar-check-fill} & \texttt{calendar-check} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-date-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-date.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-day-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-day.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-event-fill.pdf} \\
+        \texttt{calendar-date-fill} & \texttt{calendar-date} & \texttt{calendar-day-fill} & \texttt{calendar-day} & \texttt{calendar-event-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-event.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-minus-fill.pdf} \\
+        \texttt{calendar-event} & \texttt{calendar-fill} & \texttt{calendar-heart-fill} & \texttt{calendar-heart} & \texttt{calendar-minus-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-minus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-month-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-month.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-plus.pdf} \\
+        \texttt{calendar-minus} & \texttt{calendar-month-fill} & \texttt{calendar-month} & \texttt{calendar-plus-fill} & \texttt{calendar-plus} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-range-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-range.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-week-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-week.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-x-fill.pdf} \\
+        \texttt{calendar-range-fill} & \texttt{calendar-range} & \texttt{calendar-week-fill} & \texttt{calendar-week} & \texttt{calendar-x-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-date-fill.pdf} \\
+        \texttt{calendar-x} & \texttt{calendar} & \texttt{calendar2-check-fill} & \texttt{calendar2-check} & \texttt{calendar2-date-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-date.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-day-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-day.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-event-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-event.pdf} \\
+        \texttt{calendar2-date} & \texttt{calendar2-day-fill} & \texttt{calendar2-day} & \texttt{calendar2-event-fill} & \texttt{calendar2-event} \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-minus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-minus.pdf} \\
+        \texttt{calendar2-fill} & \texttt{calendar2-heart-fill} & \texttt{calendar2-heart} & \texttt{calendar2-minus-fill} & \texttt{calendar2-minus} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-month-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-month.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-range-fill.pdf} \\
+        \texttt{calendar2-month-fill} & \texttt{calendar2-month} & \texttt{calendar2-plus-fill} & \texttt{calendar2-plus} & \texttt{calendar2-range-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-range.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-week-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-week.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-x-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2-x.pdf} \\
+        \texttt{calendar2-range} & \texttt{calendar2-week-fill} & \texttt{calendar2-week} & \texttt{calendar2-x-fill} & \texttt{calendar2-x} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3-event-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3-event.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3-range-fill.pdf} \\
+        \texttt{calendar2} & \texttt{calendar3-event-fill} & \texttt{calendar3-event} & \texttt{calendar3-fill} & \texttt{calendar3-range-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3-range.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3-week-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3-week.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar3.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar4-event.pdf} \\
+        \texttt{calendar3-range} & \texttt{calendar3-week-fill} & \texttt{calendar3-week} & \texttt{calendar3} & \texttt{calendar4-event} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar4-range.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar4-week.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/calendar4.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera-reels-fill.pdf} \\
+        \texttt{calendar4-range} & \texttt{calendar4-week} & \texttt{calendar4} & \texttt{camera-fill} & \texttt{camera-reels-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera-reels.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera-video-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera-video-off-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera-video-off.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera-video.pdf} \\
+        \texttt{camera-reels} & \texttt{camera-video-fill} & \texttt{camera-video-off-fill} & \texttt{camera-video-off} & \texttt{camera-video} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/camera2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/capslock-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/capslock.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/capsule-pill.pdf} \\
+        \texttt{camera} & \texttt{camera2} & \texttt{capslock-fill} & \texttt{capslock} & \texttt{capsule-pill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/capsule.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/car-front-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/car-front.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/card-checklist.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/card-heading.pdf} \\
+        \texttt{capsule} & \texttt{car-front-fill} & \texttt{car-front} & \texttt{card-checklist} & \texttt{card-heading} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/card-image.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/card-list.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/card-text.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-down-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-down-square-fill.pdf} \\
+        \texttt{card-image} & \texttt{card-list} & \texttt{card-text} & \texttt{caret-down-fill} & \texttt{caret-down-square-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-down-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-left-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-left-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-left-square.pdf} \\
+        \texttt{caret-down-square} & \texttt{caret-down} & \texttt{caret-left-fill} & \texttt{caret-left-square-fill} & \texttt{caret-left-square} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-right-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-right-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-right-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-right.pdf} \\
+        \texttt{caret-left} & \texttt{caret-right-fill} & \texttt{caret-right-square-fill} & \texttt{caret-right-square} & \texttt{caret-right} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-up-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-up-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-up-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/caret-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-check-fill.pdf} \\
+        \texttt{caret-up-fill} & \texttt{caret-up-square-fill} & \texttt{caret-up-square} & \texttt{caret-up} & \texttt{cart-check-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-dash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-plus-fill.pdf} \\
+        \texttt{cart-check} & \texttt{cart-dash-fill} & \texttt{cart-dash} & \texttt{cart-fill} & \texttt{cart-plus-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-x-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart2.pdf} \\
+        \texttt{cart-plus} & \texttt{cart-x-fill} & \texttt{cart-x} & \texttt{cart} & \texttt{cart2} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart3.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cart4.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cash-coin.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cash-stack.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cash.pdf} \\
+        \texttt{cart3} & \texttt{cart4} & \texttt{cash-coin} & \texttt{cash-stack} & \texttt{cash} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cassette-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cassette.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cast.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cc-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cc-circle.pdf} \\
+        \texttt{cassette-fill} & \texttt{cassette} & \texttt{cast} & \texttt{cc-circle-fill} & \texttt{cc-circle} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cc-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cc-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-dots-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-dots.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-fill.pdf} \\
+        \texttt{cc-square-fill} & \texttt{cc-square} & \texttt{chat-dots-fill} & \texttt{chat-dots} & \texttt{chat-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-dots-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-dots.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-fill.pdf} \\
+        \texttt{chat-heart-fill} & \texttt{chat-heart} & \texttt{chat-left-dots-fill} & \texttt{chat-left-dots} & \texttt{chat-left-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-quote-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-quote.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-text-fill.pdf} \\
+        \texttt{chat-left-heart-fill} & \texttt{chat-left-heart} & \texttt{chat-left-quote-fill} & \texttt{chat-left-quote} & \texttt{chat-left-text-fill} \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left-text.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-quote-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-quote.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-dots-fill.pdf} \\
+        \texttt{chat-left-text} & \texttt{chat-left} & \texttt{chat-quote-fill} & \texttt{chat-quote} & \texttt{chat-right-dots-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-dots.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-quote-fill.pdf} \\
+        \texttt{chat-right-dots} & \texttt{chat-right-fill} & \texttt{chat-right-heart-fill} & \texttt{chat-right-heart} & \texttt{chat-right-quote-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-quote.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-text-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right-text.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-dots-fill.pdf} \\
+        \texttt{chat-right-quote} & \texttt{chat-right-text-fill} & \texttt{chat-right-text} & \texttt{chat-right} & \texttt{chat-square-dots-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-dots.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-quote-fill.pdf} \\
+        \texttt{chat-square-dots} & \texttt{chat-square-fill} & \texttt{chat-square-heart-fill} & \texttt{chat-square-heart} & \texttt{chat-square-quote-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-quote.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-text-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square-text.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-text-fill.pdf} \\
+        \texttt{chat-square-quote} & \texttt{chat-square-text-fill} & \texttt{chat-square-text} & \texttt{chat-square} & \texttt{chat-text-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat-text.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chat.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check-all.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check-circle.pdf} \\
+        \texttt{chat-text} & \texttt{chat} & \texttt{check-all} & \texttt{check-circle-fill} & \texttt{check-circle} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check-lg.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check2-all.pdf} \\
+        \texttt{check-lg} & \texttt{check-square-fill} & \texttt{check-square} & \texttt{check} & \texttt{check2-all} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check2-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check2-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/check2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-bar-contract.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-bar-down.pdf} \\
+        \texttt{check2-circle} & \texttt{check2-square} & \texttt{check2} & \texttt{chevron-bar-contract} & \texttt{chevron-bar-down} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-bar-expand.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-bar-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-bar-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-bar-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-compact-down.pdf} \\
+        \texttt{chevron-bar-expand} & \texttt{chevron-bar-left} & \texttt{chevron-bar-right} & \texttt{chevron-bar-up} & \texttt{chevron-compact-down} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-compact-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-compact-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-compact-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-contract.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-double-down.pdf} \\
+        \texttt{chevron-compact-left} & \texttt{chevron-compact-right} & \texttt{chevron-compact-up} & \texttt{chevron-contract} & \texttt{chevron-double-down} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-double-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-double-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-double-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-expand.pdf} \\
+        \texttt{chevron-double-left} & \texttt{chevron-double-right} & \texttt{chevron-double-up} & \texttt{chevron-down} & \texttt{chevron-expand} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-left.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-right.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/chevron-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/circle-half.pdf} \\
+        \texttt{chevron-left} & \texttt{chevron-right} & \texttt{chevron-up} & \texttt{circle-fill} & \texttt{circle-half} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/circle-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/claude.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-check.pdf} \\
+        \texttt{circle-square} & \texttt{circle} & \texttt{claude} & \texttt{clipboard-check-fill} & \texttt{clipboard-check} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-data-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-data.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-heart.pdf} \\
+        \texttt{clipboard-data-fill} & \texttt{clipboard-data} & \texttt{clipboard-fill} & \texttt{clipboard-heart-fill} & \texttt{clipboard-heart} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-minus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-minus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-pulse.pdf} \\
+        \texttt{clipboard-minus-fill} & \texttt{clipboard-minus} & \texttt{clipboard-plus-fill} & \texttt{clipboard-plus} & \texttt{clipboard-pulse} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-x-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-check.pdf} \\
+        \texttt{clipboard-x-fill} & \texttt{clipboard-x} & \texttt{clipboard} & \texttt{clipboard2-check-fill} & \texttt{clipboard2-check} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-data-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-data.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-heart.pdf} \\
+        \texttt{clipboard2-data-fill} & \texttt{clipboard2-data} & \texttt{clipboard2-fill} & \texttt{clipboard2-heart-fill} & \texttt{clipboard2-heart} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-minus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-minus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-pulse-fill.pdf} \\
+        \texttt{clipboard2-minus-fill} & \texttt{clipboard2-minus} & \texttt{clipboard2-plus-fill} & \texttt{clipboard2-plus} & \texttt{clipboard2-pulse-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-pulse.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-x-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clipboard2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clock-fill.pdf} \\
+        \texttt{clipboard2-pulse} & \texttt{clipboard2-x-fill} & \texttt{clipboard2-x} & \texttt{clipboard2} & \texttt{clock-fill} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clock-history.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clock.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-arrow-down-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-arrow-down.pdf} & \\
+        \texttt{clock-history} & \texttt{clock} & \texttt{cloud-arrow-down-fill} & \texttt{cloud-arrow-down} & \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-arrow-up-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-arrow-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-download-fill.pdf} \\
+        \texttt{cloud-arrow-up-fill} & \texttt{cloud-arrow-up} & \texttt{cloud-check-fill} & \texttt{cloud-check} & \texttt{cloud-download-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-download.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-drizzle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-drizzle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-fog-fill.pdf} \\
+        \texttt{cloud-download} & \texttt{cloud-drizzle-fill} & \texttt{cloud-drizzle} & \texttt{cloud-fill} & \texttt{cloud-fog-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-fog.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-fog2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-fog2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-hail-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-hail.pdf} \\
+        \texttt{cloud-fog} & \texttt{cloud-fog2-fill} & \texttt{cloud-fog2} & \texttt{cloud-hail-fill} & \texttt{cloud-hail} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-haze-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-haze.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-haze2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-haze2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-lightning-fill.pdf} \\
+        \texttt{cloud-haze-fill} & \texttt{cloud-haze} & \texttt{cloud-haze2-fill} & \texttt{cloud-haze2} & \texttt{cloud-lightning-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-lightning-rain-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-lightning-rain.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-lightning.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-minus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-minus.pdf} \\
+        \texttt{cloud-lightning-rain-fill} & \texttt{cloud-lightning-rain} & \texttt{cloud-lightning} & \texttt{cloud-minus-fill} & \texttt{cloud-minus} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-moon-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-moon.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-rain-fill.pdf} \\
+        \texttt{cloud-moon-fill} & \texttt{cloud-moon} & \texttt{cloud-plus-fill} & \texttt{cloud-plus} & \texttt{cloud-rain-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-rain-heavy-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-rain-heavy.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-rain.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-slash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-slash.pdf} \\
+        \texttt{cloud-rain-heavy-fill} & \texttt{cloud-rain-heavy} & \texttt{cloud-rain} & \texttt{cloud-slash-fill} & \texttt{cloud-slash} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-sleet-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-sleet.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-snow-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-snow.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-sun-fill.pdf} \\
+        \texttt{cloud-sleet-fill} & \texttt{cloud-sleet} & \texttt{cloud-snow-fill} & \texttt{cloud-snow} & \texttt{cloud-sun-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-sun.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-upload-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud-upload.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloud.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clouds-fill.pdf} \\
+        \texttt{cloud-sun} & \texttt{cloud-upload-fill} & \texttt{cloud-upload} & \texttt{cloud} & \texttt{clouds-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/clouds.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloudy-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cloudy.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/code-slash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/code-square.pdf} \\
+        \texttt{clouds} & \texttt{cloudy-fill} & \texttt{cloudy} & \texttt{code-slash} & \texttt{code-square} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/code.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/coin.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/collection-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/collection-play-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/collection-play.pdf} \\
+        \texttt{code} & \texttt{coin} & \texttt{collection-fill} & \texttt{collection-play-fill} & \texttt{collection-play} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/collection.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/columns-gap.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/columns.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/command.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/compass-fill.pdf} \\
+        \texttt{collection} & \texttt{columns-gap} & \texttt{columns} & \texttt{command} & \texttt{compass-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/compass.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cone-striped.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cone.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/controller.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cookie.pdf} \\
+        \texttt{compass} & \texttt{cone-striped} & \texttt{cone} & \texttt{controller} & \texttt{cookie} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/copy.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cpu-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cpu.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/credit-card-2-back-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/credit-card-2-back.pdf} \\
+        \texttt{copy} & \texttt{cpu-fill} & \texttt{cpu} & \texttt{credit-card-2-back-fill} & \texttt{credit-card-2-back} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/credit-card-2-front-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/credit-card-2-front.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/credit-card-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/credit-card.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/crop.pdf} \\
+        \texttt{credit-card-2-front-fill} & \texttt{credit-card-2-front} & \texttt{credit-card-fill} & \texttt{credit-card} & \texttt{crop} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/crosshair.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/crosshair2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/css.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cup-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cup-hot-fill.pdf} \\
+        \texttt{crosshair} & \texttt{crosshair2} & \texttt{css} & \texttt{cup-fill} & \texttt{cup-hot-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cup-hot.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cup-straw.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cup.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/currency-bitcoin.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/currency-dollar.pdf} \\
+        \texttt{cup-hot} & \texttt{cup-straw} & \texttt{cup} & \texttt{currency-bitcoin} & \texttt{currency-dollar} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/currency-euro.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/currency-exchange.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/currency-pound.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/currency-rupee.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/currency-yen.pdf} \\
+        \texttt{currency-euro} & \texttt{currency-exchange} & \texttt{currency-pound} & \texttt{currency-rupee} & \texttt{currency-yen} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cursor-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cursor-text.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/cursor.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash-circle-dotted.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash-circle-fill.pdf} \\
+        \texttt{cursor-fill} & \texttt{cursor-text} & \texttt{cursor} & \texttt{dash-circle-dotted} & \texttt{dash-circle-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash-lg.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash-square-dotted.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash-square.pdf} \\
+        \texttt{dash-circle} & \texttt{dash-lg} & \texttt{dash-square-dotted} & \texttt{dash-square-fill} & \texttt{dash-square} \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-add.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-down.pdf} \\
+        \texttt{dash} & \texttt{database-add} & \texttt{database-check} & \texttt{database-dash} & \texttt{database-down} \\
+        \hline
+      
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-exclamation.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-add.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-down.pdf} \\
+        \texttt{database-exclamation} & \texttt{database-fill-add} & \texttt{database-fill-check} & \texttt{database-fill-dash} & \texttt{database-fill-down} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-exclamation.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-gear.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-lock.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-slash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-up.pdf} \\
+        \texttt{database-fill-exclamation} & \texttt{database-fill-gear} & \texttt{database-fill-lock} & \texttt{database-fill-slash} & \texttt{database-fill-up} \\
+        \hline
+     
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-gear.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-lock.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-slash.pdf} \\
+        \texttt{database-fill-x} & \texttt{database-fill} & \texttt{database-gear} & \texttt{database-lock} & \texttt{database-slash} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/database.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/device-hdd-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/device-hdd.pdf} \\
+        \texttt{database-up} & \texttt{database-x} & \texttt{database} & \texttt{device-hdd-fill} & \texttt{device-hdd} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/device-ssd-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/device-ssd.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/diagram-2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/diagram-2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/diagram-3-fill.pdf} \\
+        \texttt{device-ssd-fill} & \texttt{device-ssd} & \texttt{diagram-2-fill} & \texttt{diagram-2} & \texttt{diagram-3-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/diagram-3.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/diamond-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/diamond-half.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/diamond.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-1-fill.pdf} \\
+        \texttt{diagram-3} & \texttt{diamond-fill} & \texttt{diamond-half} & \texttt{diamond} & \texttt{dice-1-fill} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-1.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-3-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-3.pdf} \\
+        \texttt{dice-1} & \texttt{dice-2-fill} & \texttt{dice-2} & \texttt{dice-3-fill} & \texttt{dice-3} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-4-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-4.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-5-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-5.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-6-fill.pdf} \\
+        \texttt{dice-4-fill} & \texttt{dice-4} & \texttt{dice-5-fill} & \texttt{dice-5} & \texttt{dice-6-fill} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dice-6.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/disc-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/disc.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/discord.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/display-fill.pdf} \\
+        \texttt{dice-6} & \texttt{disc-fill} & \texttt{disc} & \texttt{discord} & \texttt{display-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/display.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/displayport-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/displayport.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/distribute-horizontal.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/distribute-vertical.pdf} \\
+        \texttt{display} & \texttt{displayport-fill} & \texttt{displayport} & \texttt{distribute-horizontal} & \texttt{distribute-vertical} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/door-closed-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/door-closed.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/door-open-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/door-open.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dot.pdf} \\
+        \texttt{door-closed-fill} & \texttt{door-closed} & \texttt{door-open-fill} & \texttt{door-open} & \texttt{dot} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/download.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dpad-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dpad.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dribbble.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/dropbox.pdf} \\
+        \texttt{download} & \texttt{dpad-fill} & \texttt{dpad} & \texttt{dribbble} & \texttt{dropbox} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/droplet-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/droplet-half.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/droplet.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/duffle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/duffle.pdf} \\
+        \texttt{droplet-fill} & \texttt{droplet-half} & \texttt{droplet} & \texttt{duffle-fill} & \texttt{duffle} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ear-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ear.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/earbuds.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/easel-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/easel.pdf} \\
+        \texttt{ear-fill} & \texttt{ear} & \texttt{earbuds} & \texttt{easel-fill} & \texttt{easel} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/easel2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/easel2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/easel3-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/easel3.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/egg-fill.pdf} \\
+        \texttt{easel2-fill} & \texttt{easel2} & \texttt{easel3-fill} & \texttt{easel3} & \texttt{egg-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/egg-fried.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/egg.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eject-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eject.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-angry-fill.pdf} \\
+        \texttt{egg-fried} & \texttt{egg} & \texttt{eject-fill} & \texttt{eject} & \texttt{emoji-angry-fill} \\
+        \hline
+       
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-angry.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-astonished-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-astonished.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-dizzy-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-dizzy.pdf} \\
+        \texttt{emoji-angry} & \texttt{emoji-astonished-fill} & \texttt{emoji-astonished} & \texttt{emoji-dizzy-fill} & \texttt{emoji-dizzy} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-expressionless-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-expressionless.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-frown-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-frown.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-grimace-fill.pdf} \\
+        \texttt{emoji-expressionless-fill} & \texttt{emoji-expressionless} & \texttt{emoji-frown-fill} & \texttt{emoji-frown} & \texttt{emoji-grimace-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-grimace.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-grin-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-grin.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-heart-eyes-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-heart-eyes.pdf} \\
+        \texttt{emoji-grimace} & \texttt{emoji-grin-fill} & \texttt{emoji-grin} & \texttt{emoji-heart-eyes-fill} & \texttt{emoji-heart-eyes} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-kiss-fill.pdf} & & & & \\
+        \texttt{emoji-kiss-fill} & & & & \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-kiss.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-laughing-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-laughing.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-neutral-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-neutral.pdf} \\
+        \texttt{emoji-kiss} & \texttt{emoji-laughing-fill} & \texttt{emoji-laughing} & \texttt{emoji-neutral-fill} & \texttt{emoji-neutral} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-smile-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-smile-upside-down-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-smile-upside-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-smile.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-sunglasses-fill.pdf} \\
+        \texttt{emoji-smile-fill} & \texttt{emoji-smile-upside-down-fill} & \texttt{emoji-smile-upside-down} & \texttt{emoji-smile} & \texttt{emoji-sunglasses-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-sunglasses.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-surprise-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-surprise.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-tear-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-tear.pdf} \\
+        \texttt{emoji-sunglasses} & \texttt{emoji-surprise-fill} & \texttt{emoji-surprise} & \texttt{emoji-tear-fill} & \texttt{emoji-tear} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-wink-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/emoji-wink.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-arrow-down-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-arrow-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-arrow-up-fill.pdf} \\
+        \texttt{emoji-wink-fill} & \texttt{emoji-wink} & \texttt{envelope-arrow-down-fill} & \texttt{envelope-arrow-down} & \texttt{envelope-arrow-up-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-arrow-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-at-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-at.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-check.pdf} \\
+        \texttt{envelope-arrow-up} & \texttt{envelope-at-fill} & \texttt{envelope-at} & \texttt{envelope-check-fill} & \texttt{envelope-check} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-dash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-dash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-exclamation-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-exclamation.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-fill.pdf} \\
+        \texttt{envelope-dash-fill} & \texttt{envelope-dash} & \texttt{envelope-exclamation-fill} & \texttt{envelope-exclamation} & \texttt{envelope-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-open-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-open-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-open-heart.pdf} \\
+        \texttt{envelope-heart-fill} & \texttt{envelope-heart} & \texttt{envelope-open-fill} & \texttt{envelope-open-heart-fill} & \texttt{envelope-open-heart} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-open.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-paper-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-paper-heart-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-paper-heart.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-paper.pdf} \\
+        \texttt{envelope-open} & \texttt{envelope-paper-fill} & \texttt{envelope-paper-heart-fill} & \texttt{envelope-paper-heart} & \texttt{envelope-paper} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-slash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-slash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-x-fill.pdf} \\
+        \texttt{envelope-plus-fill} & \texttt{envelope-plus} & \texttt{envelope-slash-fill} & \texttt{envelope-slash} & \texttt{envelope-x-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/envelope.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eraser-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eraser.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/escape.pdf} \\
+        \texttt{envelope-x} & \texttt{envelope} & \texttt{eraser-fill} & \texttt{eraser} & \texttt{escape} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ethernet.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ev-front-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ev-front.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ev-station-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/ev-station.pdf} \\
+        \texttt{ethernet} & \texttt{ev-front-fill} & \texttt{ev-front} & \texttt{ev-station-fill} & \texttt{ev-station} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-diamond-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-diamond.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-lg.pdf} \\
+        \texttt{exclamation-circle-fill} & \texttt{exclamation-circle} & \texttt{exclamation-diamond-fill} & \texttt{exclamation-diamond} & \texttt{exclamation-lg} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-octagon-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-octagon.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-square-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-square.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-triangle-fill.pdf} \\
+        \texttt{exclamation-octagon-fill} & \texttt{exclamation-octagon} & \texttt{exclamation-square-fill} & \texttt{exclamation-square} & \texttt{exclamation-triangle-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation-triangle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclamation.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exclude.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/explicit-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/explicit.pdf} \\
+        \texttt{exclamation-triangle} & \texttt{exclamation} & \texttt{exclude} & \texttt{explicit-fill} & \texttt{explicit} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/exposure.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eye-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eye-slash-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eye-slash.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eye.pdf} \\
+        \texttt{exposure} & \texttt{eye-fill} & \texttt{eye-slash-fill} & \texttt{eye-slash} & \texttt{eye} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eyedropper.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/eyeglasses.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/facebook.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/fan.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/fast-forward-btn-fill.pdf} \\
+        \texttt{eyedropper} & \texttt{eyeglasses} & \texttt{facebook} & \texttt{fan} & \texttt{fast-forward-btn-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/fast-forward-btn.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/fast-forward-circle-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/fast-forward-circle.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/fast-forward-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/fast-forward.pdf} \\
+        \texttt{fast-forward-btn} & \texttt{fast-forward-circle-fill} & \texttt{fast-forward-circle} & \texttt{fast-forward-fill} & \texttt{fast-forward} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/feather.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/feather2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-arrow-down-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-arrow-down.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-arrow-up-fill.pdf} \\
+        \texttt{feather} & \texttt{feather2} & \texttt{file-arrow-down-fill} & \texttt{file-arrow-down} & \texttt{file-arrow-up-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-arrow-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-bar-graph-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-bar-graph.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-binary-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-binary.pdf} \\
+        \texttt{file-arrow-up} & \texttt{file-bar-graph-fill} & \texttt{file-bar-graph} & \texttt{file-binary-fill} & \texttt{file-binary} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-break-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-break.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-check.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-code-fill.pdf} \\
+        \texttt{file-break-fill} & \texttt{file-break} & \texttt{file-check-fill} & \texttt{file-check} & \texttt{file-code-fill} \\
+        \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-code.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-diff-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-diff.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-arrow-down-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-arrow-down.pdf} \\
+        \texttt{file-code} & \texttt{file-diff-fill} & \texttt{file-diff} & \texttt{file-earmark-arrow-down-fill} & \texttt{file-earmark-arrow-down} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-arrow-up-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-arrow-up.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-bar-graph-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-bar-graph.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-binary-fill.pdf} \\
+        \texttt{file-earmark-arrow-up-fill} & \texttt{file-earmark-arrow-up} & \texttt{file-earmark-bar-graph-fill} & \texttt{file-earmark-bar-graph} & \texttt{file-earmark-binary-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-binary.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-break-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-break.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-check-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-check.pdf} \\
+        \texttt{file-earmark-binary} & \texttt{file-earmark-break-fill} & \texttt{file-earmark-break} & \texttt{file-earmark-check-fill} & \texttt{file-earmark-check} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-code-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-code.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-diff-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-diff.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-easel-fill.pdf} \\
+        \texttt{file-earmark-code-fill} & \texttt{file-earmark-code} & \texttt{file-earmark-diff-fill} & \texttt{file-earmark-diff} & \texttt{file-earmark-easel-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-easel.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-excel-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-excel.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-font-fill.pdf} \\
+        \texttt{file-earmark-easel} & \texttt{file-earmark-excel-fill} & \texttt{file-earmark-excel} & \texttt{file-earmark-fill} & \texttt{file-earmark-font-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-font.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-image-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-image.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-lock-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-lock.pdf} \\
+        \texttt{file-earmark-font} & \texttt{file-earmark-image-fill} & \texttt{file-earmark-image} & \texttt{file-earmark-lock-fill} & \texttt{file-earmark-lock} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-lock2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-lock2.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-medical-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-medical.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-minus-fill.pdf} \\
+        \texttt{file-earmark-lock2-fill} & \texttt{file-earmark-lock2} & \texttt{file-earmark-medical-fill} & \texttt{file-earmark-medical} & \texttt{file-earmark-minus-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-minus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-music-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-music.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-pdf-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-pdf.pdf} \\
+        \texttt{file-earmark-minus} & \texttt{file-earmark-music-fill} & \texttt{file-earmark-music} & \texttt{file-earmark-pdf-fill} & \texttt{file-earmark-pdf} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-person-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-person.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-play-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-play.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-plus-fill.pdf} \\
+        \texttt{file-earmark-person-fill} & \texttt{file-earmark-person} & \texttt{file-earmark-play-fill} & \texttt{file-earmark-play} & \texttt{file-earmark-plus-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-post-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-post.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-ppt-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-ppt.pdf} \\
+        \texttt{file-earmark-plus} & \texttt{file-earmark-post-fill} & \texttt{file-earmark-post} & \texttt{file-earmark-ppt-fill} & \texttt{file-earmark-ppt} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-richtext-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-richtext.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-ruled-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-ruled.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-slides-fill.pdf} \\
+        \texttt{file-earmark-richtext-fill} & \texttt{file-earmark-richtext} & \texttt{file-earmark-ruled-fill} & \texttt{file-earmark-ruled} & \texttt{file-earmark-slides-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-slides.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-spreadsheet-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-spreadsheet.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-text-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-text.pdf} \\
+        \texttt{file-earmark-slides} & \texttt{file-earmark-spreadsheet-fill} & \texttt{file-earmark-spreadsheet} & \texttt{file-earmark-text-fill} & \texttt{file-earmark-text} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-word-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-word.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-x-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-x.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-zip-fill.pdf} \\
+        \texttt{file-earmark-word-fill} & \texttt{file-earmark-word} & \texttt{file-earmark-x-fill} & \texttt{file-earmark-x} & \texttt{file-earmark-zip-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark-zip.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-earmark.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-easel-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-easel.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-excel-fill.pdf} \\
+        \texttt{file-earmark-zip} & \texttt{file-earmark} & \texttt{file-easel-fill} & \texttt{file-easel} & \texttt{file-excel-fill} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-excel.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-font-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-font.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-image-fill.pdf} \\
+        \texttt{file-excel} & \texttt{file-fill} & \texttt{file-font-fill} & \texttt{file-font} & \texttt{file-image-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-image.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-lock-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-lock.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-lock2-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-lock2.pdf} \\
+        \texttt{file-image} & \texttt{file-lock-fill} & \texttt{file-lock} & \texttt{file-lock2-fill} & \texttt{file-lock2} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-medical-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-medical.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-minus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-minus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-music-fill.pdf} \\
+        \texttt{file-medical-fill} & \texttt{file-medical} & \texttt{file-minus-fill} & \texttt{file-minus} & \texttt{file-music-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-music.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-pdf-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-pdf.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-person-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-person.pdf} \\
+        \texttt{file-music} & \texttt{file-pdf-fill} & \texttt{file-pdf} & \texttt{file-person-fill} & \texttt{file-person} \\
+        \hline
+
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-play-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-play.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-plus-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-plus.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-post-fill.pdf} \\
+        \texttt{file-play-fill} & \texttt{file-play} & \texttt{file-plus-fill} & \texttt{file-plus} & \texttt{file-post-fill} \\
+        \hline
+        
+        \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-post.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-ppt-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-ppt.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-richtext-fill.pdf} & \includegraphics[scale=1]{../tex/bootstrapicons-pdfs/file-richtext.pdf} \\
+        \texttt{file-post} & \texttt{file-ppt-fill} & \texttt{file-ppt} & \texttt{file-richtext-fill} & \texttt{file-richtext} \\
+        \hline
+\end{tabular}        
+\end{landscape}
 \end{document}

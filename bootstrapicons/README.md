@@ -1,11 +1,11 @@
-# isosigns
+# bootstrapicons
 
-isosigns is a LaTeX package that contains safety colors (ISO 3864), safety signs (ISO 7010) and public information symbols (ISO 7001) from the ISO (https://www.iso.org/home.html). 
+bootstrapicons is a LaTeX package that provides icons from Bootstrap (https://getbootstrap.com/). 
 
-Maintainer: BenSt099 (https://github.com/BenSt099/isosigns)
+Maintainer: BenSt099 (https://github.com/BenSt099/bootstrapicons)
 
-Version 2
+Version 1
 
-License: LPPL 1.3c
+License: MIT License
 
-Note: This is **not** an **official** package from ISO.
+Note: This is **not** an **official** package from Bootstrap.
