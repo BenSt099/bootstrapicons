@@ -95,11 +95,11 @@
 \end{center}\vspace{7mm}
 
 \begin{abstract}
-\noindent This is the official documentation of the package \textbf{bootstrapicons}. It contains over 2,000 icons from Bootstrap. 
+\noindent This is the official documentation of the package \textbf{bootstrapicons}. It contains over 2,000 icons from Bootstrap that can be used for all kind of projects.
 \end{abstract}\vspace{10mm}
 
 \begin{tcolorbox}[leftrule=3mm,colback=red-200,colframe=red-800,lower separated=false,sidebyside,lefthand width=1.5cm]
-    \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} This is NOT an official package from \textbf{Bootstrap} (\href{https://getbootstrap.com/}{\textcolor{blue-700}{https://getbootstrap.com/}}).
+    \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} This is NOT an official package from the frontend framework \textbf{Bootstrap} (\href{https://getbootstrap.com/}{\textcolor{blue-700}{https://getbootstrap.com/}}).
 \end{tcolorbox}
 
 \begin{tcolorbox}[leftrule=3mm,colback=red-200,colframe=red-800,lower separated=false,sidebyside,lefthand width=1.5cm]
@@ -147,7 +147,7 @@ You can load the package with the following command in the preamble:
 
 \section{How to Use}
 
-\noindent Each icon has a name. All names and icons are listed in section~\ref{sec:icons}. The command to access an icon is:  \vspace{5mm}
+\noindent Each icon has a name. All names and icons are listed at the end of this documentation. The command to access an icon is:  \vspace{5mm}
 
 \begin{tcolorbox}[colback=gray-200]
     \vspace{3mm}
@@ -190,21 +190,21 @@ of bootstrapicons. This can be done by supplying it through the \textbf{fullpath
 
 \begin{tcolorbox}[colback=gray-200]
     \vspace{3mm}
-    \begin{verbatim}
-    %%% Example file   
-    \documentclass{article}
-    
-                                % example path
-        \usepackage[ fullpath = /texlive/2024/texmf-dist/tex/latex/bootstrapicons ]{bootstrapicons}
+\begin{verbatim}
+%%% Example file   
+\documentclass{article}
 
-    \begin{document}
+                        % example path
+\usepackage[ fullpath = /texlive/2024/texmf-dist/tex/latex/bootstrapicons ]{bootstrapicons}
 
-            \includegraphics{\bicon{0-circle}}
+\begin{document}
 
-            \includegraphics[scale=2]{\bicon{beaker-fill}}
+        \includegraphics{\bicon{0-circle}}
 
-    \end{document}
-    \end{verbatim}    
+        \includegraphics[scale=2]{\bicon{beaker-fill}}
+
+\end{document}
+\end{verbatim}    
 \end{tcolorbox}
 \vspace{5mm}
 
