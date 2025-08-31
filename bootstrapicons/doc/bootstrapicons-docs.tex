@@ -57,7 +57,7 @@
 \begin{flushright}
 \begin{tcolorbox}[leftrule=3mm,arc=0mm,width=6.5cm]
 \begin{center}
-{\Large\textcolor{white}{\it\bf AUGUST 23, 2025}}
+{\Large\textcolor{white}{\it\bf September 1, 2025}}
 \end{center}
 \end{tcolorbox}
 \end{flushright}
@@ -102,32 +102,33 @@
     \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} This is NOT an official package from the frontend framework \textbf{Bootstrap} (\href{https://getbootstrap.com/}{\textcolor{blue-700}{https://getbootstrap.com/}}).
 \end{tcolorbox}
 
-\begin{tcolorbox}[leftrule=3mm,colback=red-200,colframe=red-800,lower separated=false,sidebyside,lefthand width=1.5cm]
-    \includegraphics[scale=0.25]{danger.pdf}\tcblower {\bf\textcolor{red-800}{ATTENTION!}} If you experience problems (e.g. on Windows) with this package, it may be due to \textit{bootstrapicons} not finding the pdfs properly. Please use the workaround in section~\ref{sec:issue}.
-\end{tcolorbox}\vspace{10mm}
-
 \newpage
 
 \section{Installation}
 
-The package is included in \TeX Live and Mik\TeX. If you would like to install it manually, please download the package from GitHub (\href{https://github.com/BenSt099/bootstrapicons/releases}{\textcolor{blue-700}{https://github.com/BenSt099/bootstrapicons/releases}}).
+The package is included in \TeX Live and Mik\TeX. You can also install it via the package managers that are included in your distribution.
+If you would like to install it manually, please download the package from GitHub (\href{https://github.com/BenSt099/bootstrapicons/releases}{\textcolor{blue-700}{https://github.com/BenSt099/bootstrapicons/releases}}).
 After that, please unzip the package and put it into the directory, where your distribution puts its packages, e.g. for \TeX Live 2024 (Windows) you would put the package into this folder:
 
 \begin{verbatim}
     C:\texlive\2024\texmf-dist\tex\latex\
-\end{verbatim}
+\end{verbatim}\vspace{2mm}
 
 \noindent After this step, there should be a folder with path: 
 
 \begin{verbatim}
-    C:\texlive\2023\texmf-dist\tex\latex\bootstrapicons\
-\end{verbatim}
-in which a file 
+    C:\texlive\2024\texmf-dist\tex\latex\bootstrapicons\
+\end{verbatim}\vspace{2mm}
+
+\noindent in which the two files 
 
 \begin{verbatim}
     bootstrapicons.sty
+    bootstrapicons_complete.pdf
 \end{verbatim} 
-and several folders should reside. You can verify your installation by trying it out.
+and several folders should reside. After that, you have to update the name database.
+Depending on your distribution, this could be achieved with e.g.: \texttt{mktexlsr}.
+You can verify your installation by trying it out.
 
 \section{Loading the package \& Dependencies}
 
@@ -141,24 +142,27 @@ You can load the package with the following command in the preamble:
     \end{verbatim}    
 \end{tcolorbox}\vspace{5mm}
 
-\noindent This package has the following dependencies: \texttt{graphicx}, \texttt{ifthen}, \texttt{xkeyval}
+\noindent This package has the following dependencies: \texttt{graphicx}
 
 \newpage
 
-\section{How to Use}
+\section{Usage}
 
-\noindent Each icon has a name. All names and icons are listed at the end of this documentation. The command to access an icon is:  \vspace{5mm}
+\noindent This section deals with the construction of signs. Every sign has a number that is highlighted in red in the tables below.
+The sign \texttt{0-circle} e.g. has the number \colorbox{red-200}{\texttt{\bf 1}}. You can use the following command to include the sign in your pdf:
+\vspace{5mm}
 
 \begin{tcolorbox}[colback=gray-200]
     \vspace{3mm}
     \begin{verbatim}
-    \bicon{<name>}
+    \Bicon{<Number>}
     \end{verbatim}    
 \end{tcolorbox}
 \vspace{5mm}
 
-\noindent This command constructs a path to a sign in your \TeX Live / Mik\TeX / \ldots $\;$ installation. 
-To display a sign, use the following code:
+\noindent The command behaves like \texttt{includegraphics}. Therefore, if you wish to change angle,
+scale or other parameters, use \texttt{<Optional>}.
+Below is an example:\vspace{5mm}
 
 \begin{tcolorbox}[colback=gray-200]
     \vspace{3mm}
@@ -169,10 +173,10 @@ To display a sign, use the following code:
         \usepackage{bootstrapicons}
 
     \begin{document}
+        
+        \Bicon{14}
 
-            \includegraphics{\bicon{0-circle}}
-
-            \includegraphics[scale=2]{\bicon{beaker-fill}}
+        \Bicon[scale=1.2,angle=90]{29}
 
     \end{document}
     \end{verbatim}    
@@ -180,43 +184,4 @@ To display a sign, use the following code:
 
 \noindent\textbf{NOTE}: For more information about the icons, take a look at \href{https://icons.getbootstrap.com/}{\textcolor{blue-700}{https://icons.getbootstrap.com/}}.
 
-\newpage
-
-\section{Known Issue}\label{sec:issue}
-
-\noindent On some systems (mostly Windows), \TeX \hspace{1mm} is not able to find the pdfs properly. Since this is an issue that seems to exist only on certain systems and not all, please use the following
-workaround by providing the fullpath that leads to the installation directory 
-of bootstrapicons. This can be done by supplying it through the \textbf{fullpath}-option:
-
-\begin{tcolorbox}[colback=gray-200]
-    \vspace{3mm}
-\begin{verbatim}
-%%% Example file   
-\documentclass{article}
-
-                        % example path
-\usepackage[ fullpath = /texlive/2024/texmf-dist/tex/latex/bootstrapicons ]{bootstrapicons}
-
-\begin{document}
-
-        \includegraphics{\bicon{0-circle}}
-
-        \includegraphics[scale=2]{\bicon{beaker-fill}}
-
-\end{document}
-\end{verbatim}    
-\end{tcolorbox}
-\vspace{5mm}
-
-\noindent If you are unsure about the path, simply execute 
-\begin{verbatim}
-    kpsewhich bootstrapicons.sty
-\end{verbatim}\vspace{3mm} 
-
-\noindent in a terminal and a path will be returned. The path that is given in the example is the typical path on most systems. 
-\vspace{5mm}
-
-\noindent\textbf{NOTE}: On Windows, the path should also be given with foreslashes (just like in the example). \\
-
-\noindent\textbf{NOTE}: The last directory in the path \textit{does not} end with a foreslash (just like in the example). \\
 \end{document}

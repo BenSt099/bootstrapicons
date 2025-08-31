@@ -2,6 +2,7 @@ exp.tex
 exp.pdf
 filenames.txt
 cache.txt
+ff/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

@@ -4,19 +4,19 @@
 
 The documentation can be viewed [here](https://github.com/BenSt099/bootstrapicons/blob/main/bootstrapicons/doc/bootstrapicons-full-documentation.pdf).
 
-## Known Issues
-
-If Latex tells you that it does not find any pdf-files, please provide a full path to the package on your system via the `fullpath`-option:
+## Example
 
 ```
-                        % example path
-\usepackage[ fullpath = /texlive/2024/texmf-dist/tex/latex/bootstrapicons ]{bootstrapicons}
+%%% Example file   
+    \documentclass{article}
+    
+        \usepackage{bootstrapicons}
 
-\begin{document}
+    \begin{document}
 
-        \includegraphics{\bicon{0-circle}}
+        \Bicon{14}
 
-        \includegraphics[scale=2]{\bicon{beaker-fill}}
+        \Bicon[scale=1.2,angle=90]{29}
 
 \end{document}
 ```

@@ -22,23 +22,13 @@
 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesPackage{bootstrapicons}
-[2025/08/23 Bootstrap Icons]
+[2025/09/01 Bootstrap Icons]
 
 \RequirePackage{graphicx}
-\RequirePackage{ifthen}
-\RequirePackage{xkeyval}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\bootstrapiconspath}{false}
-\DeclareOptionX{fullpath}{\renewcommand{\bootstrapiconspath}{#1}}
-\ProcessOptionsX\relax
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ifthenelse{\equal{\bootstrapiconspath}{false}}
-{\newcommand{\bicon}[1]{./bootstrapicons-pdfs/#1.pdf}}
-{\newcommand{\bicon}[1]{\bootstrapiconspath /bootstrapicons-pdfs/#1.pdf}}
+\DeclareRobustCommand{\Bicon}[2][scale=0.3]{\includegraphics[page=#2,#1]{bootstrapicons_complete.pdf}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \endinput
