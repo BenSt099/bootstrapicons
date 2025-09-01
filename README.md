@@ -2,7 +2,7 @@
 
 ## Documentation
 
-The documentation can be viewed [here](https://github.com/BenSt099/bootstrapicons/blob/main/bootstrapicons/doc/bootstrapicons-full-documentation.pdf).
+The documentation can be viewed [here](https://github.com/BenSt099/bootstrapicons/blob/main/bootstrapicons/doc/bootstrapicons-documentation-full.pdf).
 
 ## Example
 
