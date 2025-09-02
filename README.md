@@ -6,7 +6,7 @@ The documentation can be viewed [here](https://github.com/BenSt099/bootstrapicon
 
 ## Example
 
-```
+```tex
 %%% Example file   
     \documentclass{article}
     
