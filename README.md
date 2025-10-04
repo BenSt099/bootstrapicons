@@ -32,9 +32,9 @@ This is _not_ an official package from Bootstrap.
 
     \begin{document}
 
-        \Bicon{14}
+        \bicon{14}
 
-        \Bicon[scale=1.2,angle=90]{29}
+        \bicon[scale=1.2,angle=90]{29}
 
 \end{document}
 ```
@@ -42,6 +42,14 @@ This is _not_ an official package from Bootstrap.
 ## Documentation
 
 The documentation can be viewed [here](https://github.com/BenSt099/bootstrapicons/blob/main/bootstrapicons/doc/bootstrapicons-documentation-full.pdf).
+
+## Contributors
+
+Thanks for all the feedback / comments / issues / contributions that made this package even better:
+
+- [@cpierquet](https://github.com/cpierquet)
+
+- [@rafa4mat](https://github.com/rafa4mat)
 
 ## Issues
 

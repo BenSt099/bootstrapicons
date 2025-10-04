@@ -1,8 +1,7 @@
-exp.tex
-exp.pdf
 filenames.txt
 cache.txt
 ff/
+new/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
