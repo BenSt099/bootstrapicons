@@ -4,12 +4,12 @@
   </a>
 </p>
 
-<h3 align="center">bootstrapicons</h3>
+<h3 align="center">bootstrapicons v1.1</h3>
 
 <p align="center">
   Icons from the framework Bootstrap
   <br>
-  <a href="https://mirror.physik.tu-berlin.de/pub/CTAN/macros/latex/contrib/bootstrapicons/doc/bootstrapicons-documentation-full.pdf"><strong>Explore the docs »</strong></a>
+  <a href="https://mirror.physik.tu-berlin.de/pub/CTAN/macros/latex/contrib/bootstrapicons/doc/bootstrapicons-docs.pdf"><strong>Explore the docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/BenSt099/bootstrapicons/issues">Report bug</a>
@@ -32,16 +32,18 @@ This is _not_ an official package from Bootstrap.
 
     \begin{document}
 
-        \bicon{14}
+        \bicon{alphabet}
 
-        \bicon[scale=1.2,angle=90]{29}
+        \bicon[scale=1.2, angle=90]{123}
+
+        Hello World\textbicon{globe}!
 
 \end{document}
 ```
 
 ## Documentation
 
-The documentation can be viewed [here](https://github.com/BenSt099/bootstrapicons/blob/main/bootstrapicons/doc/bootstrapicons-documentation-full.pdf).
+The documentation can be viewed [here](https://github.com/BenSt099/bootstrapicons/blob/main/bootstrapicons/doc/bootstrapicons-docs.pdf).
 
 ## Contributors
 
