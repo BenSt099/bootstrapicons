@@ -19,8 +19,8 @@
 
 ## bootstrapicons
 
-> **Warning**
-This is _not_ an official package from Bootstrap.
+> [!WARNING]
+> This is _not_ an official package from Bootstrap.
 
 ## Usage
 
